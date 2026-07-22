@@ -29,7 +29,7 @@ jobs:
           pwd
           ls -al
           cat main.py
-          shell: bash
+        shell: bash
 
   
   # CI쪽 서버에서 EC2 서버(배포용 서버)로 배포 -> SSH
@@ -44,6 +44,6 @@ jobs:
         # 복사할 대상 (편의상 .(현재디렉토리))
           source: .  
         # ubuntu os가 세팅된 ec2 서버의 /home/ubuntu/projects/*.* 복사
-          target: "/home/ubuntu/projects"
+          target: "/home/ubuntu/projects" 
 
 
