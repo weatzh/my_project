@@ -20,5 +20,15 @@ jobs:
       - name: 코드 Checkout
         uses: actions/checkout@v3
 
+      # 환경변수 파일 생성(생략) => .env
+
+  # 확인 or 단위테스트(생략)
+  - name: 확인 검증
+   # 여러개 명령어 작동시 -> |를 통해서 배치
+    run: |
+      pwd
+      ls -al
+      cat main.py
+      shell: bash
 
 
