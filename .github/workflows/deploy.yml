@@ -37,13 +37,13 @@ jobs:
       - name: sourcecode copy to EC2
         uses: appleboy/ssh-action@master
         with:
-         host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.EC2_KEY }}
-        port: 22 
-      # 복사할 대상 (편의상 .(현재디렉토리))
-        source: .  
-      # ubuntu os가 세팅된 ec2 서버의 /home/ubuntu/projects/*.* 복사
-        target: "/home/ubuntu/projects"
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.EC2_KEY }}
+          port: 22 
+        # 복사할 대상 (편의상 .(현재디렉토리))
+          source: .  
+        # ubuntu os가 세팅된 ec2 서버의 /home/ubuntu/projects/*.* 복사
+          target: "/home/ubuntu/projects"
 
 
