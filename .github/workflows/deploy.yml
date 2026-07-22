@@ -35,7 +35,7 @@ jobs:
   # CI쪽 서버에서 EC2 서버(배포용 서버)로 배포 -> SSH
   # 사전 -> AWS에서 EC2 하나 생성 -> ip/domain, ubuntu(사용자명)
       - name: sourcecode copy to EC2
-        uses: appleboy/ssh-action@master
+        uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
@@ -45,5 +45,7 @@ jobs:
           source: .  
         # ubuntu os가 세팅된 ec2 서버의 /home/ubuntu/projects/*.* 복사
           target: "/home/ubuntu/projects" 
+
+          
 
 
