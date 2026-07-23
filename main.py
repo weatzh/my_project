@@ -18,3 +18,8 @@ def home(req:Request):
     # -> 응답(return) -> 클라이언트 브라우저에게 전달 -> 랜더링, Dom tree
     # -> 브라우저 해석 화면에 그리기 -> 클라이언트는 응답된 결과를 화면에서 볼수있다
     return templates.TemplateResponse(req,"index.html")
+
+
+@app.get("/auth/login")
+def login(req:Request):
+    return templates.TemplateResponse(req,"login.html")
