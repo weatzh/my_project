@@ -58,13 +58,14 @@ jobs:
           key: ${{ secrets.EC2_KEY }}
           port: 22 
           script: |
-          # 1. 프로젝트 폴더 위치로 이동
-          # cd /home/ubuntu/projects
-          # 2. 가상환경에 추가된 패키지가 있다면
-          # ./web/bin/pip install -r requirements.txt
-          # 2. 서비스 재가동
 
-          # 3. 서비스 재가동
-          sudo systemctl restart hello.service
+            # 1. 프로젝트 폴더 위치로 이동
+            # cd /home/ubuntu/projects
+            # 2. 가상환경에 추가된 패키지가 있다면
+            # ./web/bin/pip install -r requirements.txt
+            # 2. 서비스 재가동
+
+            # 3. 서비스 재가동
+            sudo systemctl restart hello.service
 
 
