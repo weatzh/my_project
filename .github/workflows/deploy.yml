@@ -46,7 +46,7 @@ jobs:
           key: ${{ secrets.EC2_KEY }}
           port: 22
           # 복사할 대상 (편의상 .(현재디렉토리))
-          source: "./*"
+          source: .
           # ubuntu os가 세팅된 ec2 서버의 /home/ubuntu/projects/*.* 복사
           target: "/home/ubuntu/projects"
       
@@ -62,7 +62,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.EC2_KEY }}
           port: 22
-          scripts: |
+          script: |
             # 1. 프로젝트 폴더 위치로 이동
             # cd /home/ubuntu/projects
             # 2. 가상환경에 추가된 패키지가 있다면
