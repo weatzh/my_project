@@ -11,7 +11,9 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # 5. 원본소스(main.py) 복사
-# COPY . . <- 통상 이 방식 더 많이 사용, dockerignore 통해 필터링함
-COPY main.py .
+# 통상 아래 방식 더 많이 사용, dockerignore 통해 필터링함
+COPY . . 
+# COPY main.py .
+
 
 # 6. 서버가동 => 도커 컴포즈로 이관, 여기서는 생략됨
