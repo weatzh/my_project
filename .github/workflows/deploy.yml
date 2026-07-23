@@ -73,4 +73,5 @@ jobs:
             #    restart 확인 필요 (리뷰때 확인)
             # sudo systemctl restart hello.service
             sudo systemctl stop hello.service
+            sleep 2
             sudo systemctl start hello.service
