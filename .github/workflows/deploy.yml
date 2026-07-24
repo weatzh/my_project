@@ -28,7 +28,7 @@ jobs:
           context: ./app
           file: ./app/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/fastapi-app:1.0
+          tags: ${{ secrets.DOCKER_USERNAME }}/fastapi-app:1.1
   
     # 사용자명/nginx-proxy:1.0 형태로 이미지 빌드 -> 푸시
       - name: build and push nginx proxy

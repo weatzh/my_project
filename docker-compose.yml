@@ -27,7 +27,7 @@ services:
   app:
   # 로컬에서 build => 도커 허브에서 내려받는 방식 변경
   # image: ${{ secrets.DOCKER_USERNAME }}/fastapi-app:1.0
-    image: weatzh/fastapi-app:1.0
+    image: weatzh/fastapi-app:1.1
     container_name: fastapi_app
     restart: unless-stopped
     ports:
